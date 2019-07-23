@@ -133,7 +133,7 @@ func BookEvent(w http.ResponseWriter, r *http.Request) {
 }
 func mailSending(fname string, lname string, email string, bimage string, eventname string, eventdate string, eventlocation string, ticketbooked string, amountpaid string) {
 	bimage = strings.ReplaceAll(bimage, "-", "/")
-	mail := mailyak.New("smtp.gmail.com:587", smtp.PlainAuth("", "sathishbalucs@gmail.com", "98425588833", "smtp.gmail.com"))
+	mail := mailyak.New("smtp.gmail.com:587", smtp.PlainAuth("", "sathishbalucs@gmail.com", "***********", "smtp.gmail.com"))
 
 	mail.To(email)
 	mail.From("oops@itsallbroken.com")
